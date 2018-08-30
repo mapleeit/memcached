@@ -30,11 +30,16 @@
     "eslint": "^5.4.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
+    "husky": "^1.0.0-rc.13",
     "mocha": "*",
-    "pre-commit": "*",
     "should": "*"
   },
   "scripts": {
     "test": "MEMCACHED__HOST=localhost mocha $(find test -name '*.test.js') --exit"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test"
+    }
   }
 }
