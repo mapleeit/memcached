@@ -27,11 +27,14 @@
     "jackpot": ">=0.0.6"
   },
   "devDependencies": {
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
     "mocha": "*",
-    "should": "*",
-    "pre-commit": "*"
+    "pre-commit": "*",
+    "should": "*"
   },
   "scripts": {
-    "test": "mocha $(find test -name '*.test.js') --exit"
+    "test": "MEMCACHED__HOST=localhost mocha $(find test -name '*.test.js') --exit"
   }
 }
