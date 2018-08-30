@@ -35,11 +35,12 @@
     "should": "*"
   },
   "scripts": {
-    "test": "MEMCACHED__HOST=localhost mocha $(find test -name '*.test.js') --exit"
+    "test": "MEMCACHED__HOST=localhost mocha --exit",
+    "lint": "eslint"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test"
+      "pre-commit": "npm run test && npm run lint"
     }
   }
 }
